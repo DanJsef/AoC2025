@@ -1,0 +1,35 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+
+	"github.com/DanJsef/AoC2025/puzzles"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Println("Run day:")
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("Error reading input")
+		return
+	}
+
+	dayIdx, err := strconv.Atoi(strings.TrimSpace(input))
+	if err != nil {
+		fmt.Println("Invalid day input")
+		return
+	}
+
+	switch int(dayIdx) {
+	case 1:
+		day01.Run()
+	default:
+		fmt.Println("Invalid day input")
+	}
+}
