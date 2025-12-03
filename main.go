@@ -7,7 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/DanJsef/AoC2025/puzzles"
+	"github.com/DanJsef/AoC2025/puzzles/day01"
+	"github.com/DanJsef/AoC2025/puzzles/day02"
 )
 
 func main() {
@@ -29,6 +30,8 @@ func main() {
 	switch int(dayIdx) {
 	case 1:
 		day01.Run()
+	case 2:
+		day02.Run()
 	default:
 		fmt.Println("Invalid day input")
 	}

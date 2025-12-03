@@ -24,7 +24,6 @@ func (s *Safe) rotateLeft(byValue int) {
 	s.lockValue = 99 + s.lockValue + 1
 
 	if s.lockValue != 0 && old != 0 {
-		fmt.Println("Increase count")
 		s.zeroClickCount++
 	}
 }
@@ -40,7 +39,6 @@ func (s *Safe) rotateRight(byValue int) {
 	s.lockValue = s.lockValue - 99 - 1
 
 	if s.lockValue != 0 && old != 0 {
-		fmt.Println("Increase count")
 		s.zeroClickCount++
 	}
 }
@@ -55,8 +53,6 @@ func (s *Safe) checkLockState() {
 }
 
 func Run() {
-	fmt.Println("hello day 01")
-
 	file, err := os.Open("./inputs/day01.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
@@ -84,8 +80,6 @@ func Run() {
 			safe.rotateLeft(amount)
 		}
 
-		fmt.Println(safe.lockValue)
-		fmt.Println()
 		safe.checkLockState()
 	}
 
