@@ -13,6 +13,7 @@ import (
 	"github.com/DanJsef/AoC2025/puzzles/day04"
 	"github.com/DanJsef/AoC2025/puzzles/day05"
 	"github.com/DanJsef/AoC2025/puzzles/day06"
+	"github.com/DanJsef/AoC2025/puzzles/day07"
 )
 
 func main() {
@@ -44,6 +45,8 @@ func main() {
 		day05.Run()
 	case 6:
 		day06.Run()
+	case 7:
+		day07.Run()
 	default:
 		fmt.Println("Invalid day input")
 	}
